@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+}
+
+#calculator {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px; /* Reduced from 500px */
+    overflow: hidden;
+    margin: 20px;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 3rem; /* Reduced from 5rem */
+    text-align: right; /* Changed from left */
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color: aliceblue;
+    box-sizing: border-box;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+button {
+    aspect-ratio: 1/1; /* Makes buttons square */
+    width: 100%; /* Buttons will now scale with container */
+    max-width: 80px; /* Limits button size */
+    border-radius: 50%;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 1.5rem; /* Reduced from 3rem */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+button:active {
+    background-color: hsl(0, 0%, 50%);
+}
+
+.operation-btn {
+    background-color: rgb(158, 108, 16);
+}
+
+.operation-btn:hover {
+    background-color: rgb(210, 164, 79);
+}
+
+.operation-btn:active {
+    background-color: rgb(104, 68, 3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    #display {
+        font-size: 2.5rem;
+        padding: 15px;
+    }
+    
+    button {
+        font-size: 1.2rem;
+    }
+    
+    #keys {
+        gap: 8px;
+        padding: 15px;
+    }
+}
